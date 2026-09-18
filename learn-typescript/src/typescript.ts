@@ -30,7 +30,15 @@ const Product: {
     name: "laptop",
     rate: ProductRate.low,
 };
+enum status {
+    done = " hoan thanh ",
+    doing = " dang lam ",
+}
 
+const numbers: number[] = [1,2,3,4];
+const students: string[] = ["nam", "an"];
+const products:{name:string}[]= [{name: "laptop"}, {name:"laptop"}];
+const newProducts = [ ]
 console.log(student);
 console.log(Product);
 console.log(ProductRate);

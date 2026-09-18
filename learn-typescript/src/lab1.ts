@@ -4,3 +4,46 @@ function chuvihcn(chieudai: number, chieurong: number) {
 }
 
 console.log(chuvihcn(3, 4));
+// 2. Hàm tính tổng nhiều số (Rest Parameter)
+function tong(...numbers: number[]) {
+  let sum = 0;
+
+  for (let num of numbers) {
+    sum += num;
+  }
+
+  return sum;
+}
+
+console.log(tong(1, 2, 3, 4, 5));
+// 3. Hàm đếm số lần xuất hiện của 1 ký tự trong chuỗi
+function demKyTu(str: string, kyTu: string) {
+  let count = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === kyTu) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+console.log(demKyTu("hello world", "l"));
+// 4. Hàm kiểm tra số nguyên tố
+function laSoNguyenTo(n: number): boolean {
+  if (n < 2) {
+    return false;
+  }
+
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+console.log(laSoNguyenTo(7));
+console.log(laSoNguyenTo(10)); 
